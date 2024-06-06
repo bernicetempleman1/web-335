@@ -1,0 +1,17 @@
+{
+  "_id": "1",
+  "firstName": "Bernice",
+  "lastName": "Templeman",
+  "burger": [
+    {
+      "_id": "1",
+      "burgerName": "Veggie Burger",
+      "price": "4.00"
+    },
+    {
+      "_id": "2",
+      "burgerName": "Super Veggie Burger",
+      "price": "5.00"
+    }
+  ]
+}
