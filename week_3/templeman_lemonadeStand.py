@@ -38,4 +38,4 @@ results = '${0:.2f} (cost of lemons) + ${1:.2f} (cost of sugar) = ${2:.2f} (tota
     lemons_cost, sugar_cost, total_cost)
 
 # print the results to the console using an output variable and string concatenation.
-print('{0} The profit is ${1:.2f}'.format(results, profit))
+print('{0} The profit is ${1:.2f}.'.format(results, profit))

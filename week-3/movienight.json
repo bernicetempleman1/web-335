@@ -21,7 +21,7 @@
         "genre": "Superhero",
         "rating": {
           "id": "r2",
-          "ratingScore": "Superhero",
+          "ratingScore": "10",
           "viewerId": "c1234567890123456789012345678901",
           "movieId": "m1234567890123456789012345678902"
         }
