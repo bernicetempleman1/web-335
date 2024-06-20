@@ -1,0 +1,26 @@
+{
+  "charger": {
+    "_id": "1",
+    "chargerType": "Samsung 45W Super Fast Wall Charger",
+    "voltage": "240"
+  },
+  "user": {
+    "_id": "c1234567890123456789012345678901",
+    "firstName": "Bernice",
+    "lastName": "Templeman",
+    "device": [
+      {
+        "_id": "d1234567890123456789012345678901",
+        "deviceName": "Samsung Galaxy S24 Ultra",
+        "deviceType": "Android",
+        "charger_id": "1"
+      },
+      {
+        "_id": "d1234567890123456789012345678902",
+        "deviceName": "iPad Pro 12.9",
+        "deviceType": "iPad",
+        "charger_id": "1"
+      }
+    ]
+  }
+}
