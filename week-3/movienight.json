@@ -7,27 +7,25 @@
       {
         "_id": "m1234567890123456789012345678901",
         "movieName": "Wonder Woman",
-        "genre": "Superhero"
+        "genre": "Superhero",
+        "rating": {
+          "id": "r1",
+          "ratingScore": "10",
+          "viewerId": "c1234567890123456789012345678901",
+          "movieId": "m1234567890123456789012345678901"
+        }
       },
       {
         "_id": "m1234567890123456789012345678902",
         "movieName": "X-Men",
-        "genre": "Superhero"
+        "genre": "Superhero",
+        "rating": {
+          "id": "r2",
+          "ratingScore": "10",
+          "viewerId": "c1234567890123456789012345678901",
+          "movieId": "m1234567890123456789012345678902"
+        }
       }
     ]
-  },
-  "rating": [
-    {
-      "id": "r2",
-      "ratingScore": "10",
-      "viewerId": "c1234567890123456789012345678901",
-      "movieId": "m1234567890123456789012345678902"
-    },
-    {
-      "id": "r1",
-      "ratingScore": "10",
-      "viewerId": "c1234567890123456789012345678901",
-      "movieId": "m1234567890123456789012345678901"
-    }
-  ]
+  }
 }
