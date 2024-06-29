@@ -11,7 +11,6 @@ tasks = ["Buy lemons", "Make lemonade", "Sell lemonade", "Count earnings",
          "Clean up"]  # normal level comment explaining this line of code
 
 def display_tasks():
-  # Using a for loop to iterate over the list
   # Use a for loop to iterate over the list of tasks and print them to the console window.
   for task in tasks:
     print(task)
@@ -20,40 +19,33 @@ def display_tasks():
 days = ["Sunday", "Monday", "Tuesday",
         "Wednesday", "Thursday", "Friday", "Saturday"]
 
+# For loop to list days
 def display_days():
   for day in days:  # Use a for loop to iterate over the list of days
     print(day)
   print()
 
-
+# find the task for the day and print it
 def find_task(day):
-  # Use a for loop to iterate over the list of days
   if day == "Saturday" or day == "Sunday":
     task = "This is a day off and you should rest."
-  elif day == "Monday":
-    task = "Buy lemons."
-  elif day == "Tuesday":
-    task = "Make lemonade"
-  elif day == "Wednesday":
-    task = "Sell lemonade"
-  elif day == "Thursday":
-    task = "Count earnings"
-  elif day == "Friday":
-    task = "Clean up"
-  else: print()
+  else:
+    index = days.index(day) - 1
+    task = tasks[index]
   print('{0}: {1}'.format(day, task))
 
+# Use a for loop to iterate over the list of days and find the task
+def list_tasks_by_day():
+  for day in days:
+    find_task(day)
 
 """ Call the methods and output the results. """
-print("-- LIST OF TASKS --")
-display_days()
-
-print()
-
+# print tasks to the console window
 print("-- LIST OF TASKS --")
 display_tasks()
 
 print()
 
-print("-- TASK for the DAY --")
-find_task("Sunday")
+#  use the print function to output the tasks and days of the week: (display a message indicating the day of the week and the corresponding task from the tasks list.)
+print("-- TASKS for EACH DAY --")
+list_tasks_by_day()
