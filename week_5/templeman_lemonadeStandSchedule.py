@@ -10,34 +10,43 @@ loops and conditionals to process these lists.
 tasks = ["Buy lemons", "Make lemonade", "Sell lemonade", "Count earnings",
          "Clean up"]  # normal level comment explaining this line of code
 
+
 def display_tasks():
-  # Use a for loop to iterate over the list of tasks and print them to the console window.
-  for task in tasks:
-    print(task)
+    # Use a for loop to iterate over the list of tasks and print them to the console window.
+    for task in tasks:
+        print(task)
+
 
 # Defining a list of days (Sunday through Saturday).
 days = ["Sunday", "Monday", "Tuesday",
         "Wednesday", "Thursday", "Friday", "Saturday"]
 
 # For loop to list days
+
+
 def display_days():
-  for day in days:  # Use a for loop to iterate over the list of days
-    print(day)
-  print()
+    for day in days:  # Use a for loop to iterate over the list of days
+        print(day)
+    print()
 
 # find the task for the day and print it
+
+
 def find_task(day):
-  if day == "Saturday" or day == "Sunday":
-    task = "This is a day off and you should rest."
-  else:
-    index = days.index(day) - 1
-    task = tasks[index]
-  print('{0}: {1}'.format(day, task))
+    if day == "Saturday" or day == "Sunday":
+        task = "This is a day off and you should rest."
+    else:
+        index = days.index(day) - 1
+        task = tasks[index]
+    print('{0}: {1}'.format(day, task))
 
 # Use a for loop to iterate over the list of days and find the task
+
+
 def list_tasks_by_day():
-  for day in days:
-    find_task(day)
+    for day in days:
+        find_task(day)
+
 
 """ Call the methods and output the results. """
 # print tasks to the console window
