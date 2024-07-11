@@ -28,7 +28,7 @@
       "_id": "c1001",
       "firstName": "Hermione",
       "lastName": "Granger",
-      "wishlist": [
+      "wishlistitems": [
         {
           "_id": "w1001",
           "customerId": "c1001",
@@ -45,7 +45,7 @@
       "_id": "c1002",
       "firstName": "Harry",
       "lastName": "Potter",
-      "wishlist": [
+      "wishlistitems": [
         {
           "_id": "w1003",
           "customerId": "c1002",
