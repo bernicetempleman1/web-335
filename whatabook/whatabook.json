@@ -1,48 +1,48 @@
 {
   "book": [
     {
-      "_id": "ISBN-9781517295102",
+      "bookId": "ISBN-9781517295102",
       "title": "The Design of Web APIs",
       "author": "Arnaud Lauret",
-      "genre": "Technology",
+      "genre": "Technology"
     },
     {
-      "_id": "ISBN-9780321826626",
+      "bookId": "ISBN-9780321826626",
       "title": "NoSQL Distilled",
       "author": "Pramod J. Sadalage & Martin Fowler",
-      "genre": "Technology",
+      "genre": "Technology"
     }
   ],
   "customer": [
     {
-      "_id": "c1001",
+      "customerId": "c1001",
       "firstName": "Hermione",
       "lastName": "Granger",
       "wishlistitems": [
         {
-          "_id": "w1001",
+          "wishid": "w1001",
           "customerId": "c1001",
           "bookId": "ISBN-9781517295102"
         },
         {
-          "_id": "w1002",
+          "wishId": "w1002",
           "customerId": "c1001",
           "bookId": "ISBN-9780321826626"
         }
       ]
     },
     {
-      "_id": "c1002",
+      "customerId": "c1002",
       "firstName": "Harry",
       "lastName": "Potter",
       "wishlistitems": [
         {
-          "_id": "w1003",
+          "wishId": "w1003",
           "customerId": "c1002",
           "bookId": "ISBN-9781517295102"
         },
         {
-          "_id": "w1004",
+          "wishId": "w1004",
           "customerId": "c1003",
           "bookId": "ISBN-9780321826626"
         }

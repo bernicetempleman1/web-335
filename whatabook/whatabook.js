@@ -3,56 +3,6 @@
     Author: Professor Krasso
     Date: 11 August 2022
     Description: MongoDB Shell Scripts for the houses and students collections.
-
-      "_id": "ISBN-9781517295102",
-      "title": "The Design of Web APIs",
-      "author": "Arnaud Lauret",
-      "genre": "Technology",
-    },
-    {
-      "_id": "ISBN-9780321826626",
-      "title": "NoSQL Distilled",
-      "author": "Pramod J. Sadalage & Martin Fowler",
-      "genre": "Technology",
-    }
-
-
-    "_id": "c1001",
-      "firstName": "Hermione",
-      "lastName": "Granger",
-      "wishlistitems": [
-        {
-          "_id": "w1001",
-          "customerId": "c1001",
-          "bookId": "ISBN-9781517295102"
-        },
-        {
-          "_id": "w1002",
-          "customerId": "c1001",
-          "bookId": "ISBN-9780321826626"
-        }
-      ]
-    },
-    {
-      "_id": "c1002",
-      "firstName": "Harry",
-      "lastName": "Potter",
-      "wishlistitems": [
-        {
-          "_id": "w1003",
-          "customerId": "c1002",
-          "bookId": "ISBN-9781517295102"
-        },
-        {
-          "_id": "w1004",
-          "customerId": "c1003",
-          "bookId": "ISBN-9780321826626"
-        }
-      ]
-    }
-  ]
-}
-
  */
 
 // Delete the houses and students collections.
@@ -65,7 +15,7 @@ db.createCollection("books", {
     $jsonSchema: {
       bsonType: "object",
       properties: {
-        bookid: {
+        bookId: {
           bsonType: "string",
         },
         title: {
@@ -87,7 +37,7 @@ db.createCollection("customers", {
     $jsonSchema: {
       bsonType: "object",
       properties: {
-        customerid: {
+        customerId: {
           bsonType: "string",
         },
         firstName: {
@@ -99,7 +49,7 @@ db.createCollection("customers", {
         wishlistitems: {
           bsonType: "array",
           properties: {
-            customer_id: {
+            wishId: {
               bsonType: "string",
             },
             customerId: {
@@ -117,14 +67,14 @@ db.createCollection("customers", {
 
 // Books
 webapis = {
-  bookid: "ISBN-9781517295102",
+  bookId: "ISBN-9781517295102",
   title: "The Design of Web APIs",
   author: "Arnaud Lauret",
   genre: "Technology",
 };
 
 nosql = {
-  bookid: "ISBN-9780321826626",
+  bookId: "ISBN-9780321826626",
   title: "NoSQL Distilled",
   author: "Pramod J. Sadalage & Martin Fowler",
   genre: "Technology",
@@ -136,17 +86,17 @@ db.books.insertOne(nosql);
 
 // customers
 hermione = {
-  customerid: "c1001",
+  customerId: "c1001",
   firstName: "Hermione",
   lastName: "Granger",
   wishlistitems: [
     {
-      wishid: "w1001",
+      wishId: "w1001",
       customerId: "c1001",
       bookId: "ISBN-9781517295102",
     },
     {
-      wishid: "w1002",
+      wishId: "w1002",
       customerId: "c1001",
       bookId: "ISBN-9780321826626",
     },
