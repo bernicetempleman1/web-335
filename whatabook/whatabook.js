@@ -1,8 +1,10 @@
 /**
-	Title: houses.js
+	  Title: whatabook.js
     Author: Professor Krasso
-    Date: 11 August 2022
-    Description: MongoDB Shell Scripts for the houses and students collections.
+            Bernice Templeman
+    Date: 18 August 2024
+    Description: MongoDB Shell Scripts for the books and customers colections
+    Attribution: houses.js by Professor Krasso
  */
 
 // Delete the houses and students collections.
