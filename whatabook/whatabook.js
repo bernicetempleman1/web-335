@@ -48,22 +48,11 @@ db.createCollection("customers", {
         lastName: {
           bsonType: "string",
         },
-        wishlist: {
-          bsonType: "object",
+        wishlistitems: {
+          bsonType: "array",
           properties: {
-            wishlistitems: {
-              bsonType: "array",
-              properties: {
-                wishlistitemID: {
-                  bsonType: "string",
-                },
-                customerId: {
-                  bsonType: "string",
-                },
-                bookId: {
-                  bsonType: "string",
-                },
-              },
+            bookId: {
+              bsonType: "string",
             },
           },
         },
@@ -98,13 +87,9 @@ hermione = {
   lastName: "Granger",
   wishlistitems: [
     {
-      wishlistitemId: "w1001",
-      customerId: "c1001",
       bookId: "ISBN-9781517295102",
     },
     {
-      wishlistitemId: "w1002",
-      customerId: "c1001",
       bookId: "ISBN-9780321826626",
     },
   ],
@@ -116,13 +101,9 @@ harry = {
   lastName: "Potter",
   wishlistitems: [
     {
-      wishlistitemId: "w1003",
-      customerId: "c1002",
       bookId: "ISBN-9781517295102",
     },
     {
-      wishlistitemId: "w1004",
-      customerId: "c1003",
       bookId: "ISBN-9780321826626",
     },
   ],
