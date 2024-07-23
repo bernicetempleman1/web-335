@@ -1,19 +1,13 @@
 """
 Author: Bernice Templeman
+        Sheldon Skaggs
+        Meher Salim
 Date: 07/23/2024
 File Name: HouseArcadia_whatabook.py
-Description: Python program that connects to web335DB database
+Description: Console Application Requirements: Python program that connects to web335DB database
+Attributions: Professor Krasso course and book
+              Agrawal, A: Python Menu: https://medium.com/@anushagrawal01/building-an-interactive-python-menu-for-executing-commands-2e8a6b028a38
 
-Console Application Requirements:
-1. Connect to your MongoDB database.
-2. Display a list of books.
-Format the output so it is easy to read.
-3. Display a list of books by Genre.
-For this requirement, supply the user with a list of genre choices and
-display the appropriate books based on their selection.
-4. Display a customers wishlist by customerId.
-For this requirement, prompt the user to enter a customerId (c1007, c1008, or c1009) and display the appropriate wishlist.
-5. Add basic error handling to account for an invalid customerId (hint: use an if…else or switch statement).
 """
 
 # Import the MongoClient
@@ -26,6 +20,7 @@ client = MongoClient(
 # Configure a variable to access the web335DB
 db = client['web335DB']
 
+#Display main menu
 def main_menu():
   print()
   print("Select: ")
@@ -49,12 +44,13 @@ def main_menu():
     print("Invalid choice.")
   main_menu()
 
+# Display a list of books.
 def print_books():
-    # Print all documents in books collection
     print("\nList of all books:")
     for book in db.books.find({}, {'_id':0,'title': 1, 'author':1, 'genre': 1}):
         print(book)
 
+# Display menu for genre
 def genre_menu():
   print()
   print("Select a Genre to Display Books")
@@ -94,8 +90,8 @@ def genre_menu():
   for book in db.books.find({ 'genre': genre}, {'_id':0,'title': 1, 'genre': 1}):
     print(book)
 
+# Display wishlist
 def print_wishlist():
-    # Display list of books by genre
     customer = input ('Please enter your customer id: ')
     if db.customers.count_documents({ 'customerId': customer }, limit = 1) != 0:
       print("Wishlist for customer ID")
