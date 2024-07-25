@@ -18,9 +18,9 @@ client = MongoClient(
     'mongodb+srv://web335_user:s3cret@bellevueuniversity.lftytpq.mongodb.net/?retryWrites=true&w=majority&appName=BellevueUniversity')
 
 # Configure a variable to access the web335DB
-db = client['web335DB']
+db = client['whatabook']
 
-#Display main menu
+# Display main menu
 def main_menu():
   print()
   print("Select: ")
@@ -47,8 +47,12 @@ def main_menu():
 # Display a list of books.
 def print_books():
     print("\nList of all books:")
-    for book in db.books.find({}, {'_id':0,'title': 1, 'author':1, 'genre': 1}):
-        print(book)
+    for book in db.books.find({}, {'_id': 0, 'bookId': 1, 'title': 1, 'author': 1, 'genre': 1}):
+        print("")
+        print("Book Id: " + book["bookId"] )
+        print("\tTitle: " + book["title"] )
+        print("\tAuthor: " + book["author"] )
+        print("\tGenre: " + book["genre"] )
 
 # Display menu for genre
 def genre_menu():
@@ -87,16 +91,34 @@ def genre_menu():
     genre_menu()
 
   print("\nList of books in genre:", genre)
-  for book in db.books.find({ 'genre': genre}, {'_id':0,'title': 1, 'genre': 1}):
+  for book in db.books.find({'genre': genre}, {'_id': 0, 'title': 1, 'genre': 1}):
     print(book)
 
 # Display wishlist
+
+
 def print_wishlist():
-    customer = input ('Please enter your customer id: ')
-    if db.customers.count_documents({ 'customerId': customer }, limit = 1) != 0:
-      print("Wishlist for customer ID")
-      for wishlistitems in db.customers.find({'customerId': customer}, {'_id':0,'wishlistitems': 1}):
-            print(wishlistitems)
+    customer = input('Please enter your customer id: ')
+    if db.customers.count_documents({'customerId': customer}, limit=1) != 0:
+      print("")
+
+      pipeline = [{"$match": {"customerId": customer}}]
+      results = db.customers.aggregate(pipeline)
+
+      # A loop that prints the results
+      for customer in results:
+        print("Customer Id: " + customer["customerId"] + "\nName: " +
+              customer["firstName"] + " " + customer["lastName"])
+
+        # A loop to print the wishlist
+        print("Wishlist:")
+
+        for x in customer["wishlistitems"]:
+          print("")
+          print("Book Id: " + x["bookId"] )
+          print("\tTitle: " + x["title"] )
+          print("\tAuthor: " + x["author"] )
+          print("\tGenre: " + x["genre"] )
     else:
         print("Please enter a valid customer id.")
 

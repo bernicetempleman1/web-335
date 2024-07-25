@@ -55,15 +55,6 @@ db.createCollection("customers", {
             bookId: {
               bsonType: "string",
             },
-            title: {
-              bsonType: "string",
-            },
-            author: {
-              bsonType: "string",
-            },
-            genre: {
-              bsonType: "string",
-            },
           },
         },
       },
@@ -210,15 +201,9 @@ hermione = {
   wishlistitems: [
     {
       bookId: "ISBN-9781517295102",
-      title: "The Design of Web APIs",
-      author: "Arnaud Lauret",
-      genre: "Technology",
     },
     {
       bookId: "ISBN-9780321826626",
-      title: "NoSQL Distilled",
-      author: "Pramod J. Sadalage & Martin Fowler",
-      genre: "Technology",
     },
   ],
 };
@@ -230,15 +215,9 @@ harry = {
   wishlistitems: [
     {
       bookId: "ISBN-9781517295102",
-      title: "The Design of Web APIs",
-      author: "Arnaud Lauret",
-      genre: "Technology",
     },
     {
       bookId: "ISBN-9780321826626",
-      title: "NoSQL Distilled",
-      author: "Pramod J. Sadalage & Martin Fowler",
-      genre: "Technology",
     },
   ],
 };
@@ -250,15 +229,9 @@ sam = {
   wishlistitems: [
     {
       bookId: "ISBN-9780451492128",
-      title: "Brief Cases",
-      author: "Jim Butcher",
-      genre: "Fantasy",
     },
     {
       bookId: "ISBN-9780441139897",
-      title: "Daybreak-2250 A.D.",
-      author: "Andre Norton",
-      genre: "Science Fiction",
     },
   ],
 };
@@ -270,21 +243,12 @@ rosie = {
   wishlistitems: [
     {
       bookId: "ISBN-9780982332207",
-      title: "Who Goes There?",
-      author: "John W. Campbell Jr.",
-      genre: "Science Fiction",
     },
     {
       bookId: "ISBN-9780451492128",
-      title: "Brief Cases",
-      author: "Jim Butcher",
-      genre: "Fantasy",
     },
     {
       bookId: "ISBN-9780441139897",
-      title: "Daybreak-2250 A.D.",
-      author: "Andre Norton",
-      genre: "Science Fiction",
     },
   ],
 };
@@ -296,15 +260,9 @@ theo = {
   wishlistitems: [
     {
       bookId: "ISBN-9781849517522",
-      title: "Git: Version Control for Everyone",
-      author: "Ravishankar Somasundaram",
-      genre: "Technology",
     },
     {
       bookId: "ISBN-9780553285451",
-      title: "Submarine Warriors",
-      author: "Edwyn Gray",
-      genre: "Military History",
     },
   ],
 };
@@ -316,15 +274,9 @@ marie = {
   wishlistitems: [
     {
       bookId: "ISBN-9788828374572",
-      title: "Ben Hogan's Five Lessons: The Modern Fundamentals of Golf",
-      author: "Ben Hogan",
-      genre: "Sports",
     },
     {
       bookId: "ISBN-9780982332207",
-      title: "Who Goes There?",
-      author: "John W. Campbell Jr.",
-      genre: "Science Fiction",
     },
   ],
 };
@@ -336,15 +288,9 @@ lily = {
   wishlistitems: [
     {
       bookId: "ISBN-9780451492128",
-      title: "Brief Cases",
-      author: "Jim Butcher",
-      genre: "Fantasy",
     },
     {
       bookId: "ISBN-9781595141743",
-      title: "Vampire Academy",
-      author: "Richelle Mead",
-      genre: "Fantasy",
     },
   ],
 };
