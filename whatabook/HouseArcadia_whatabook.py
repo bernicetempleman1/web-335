@@ -8,6 +8,7 @@ Description: Console Application Requirements: Python program that connects to w
 Attributions: Professor Krasso course and book
               Agrawal, A: Python Menu: https://medium.com/@anushagrawal01/building-an-interactive-python-menu-for-executing-commands-2e8a6b028a38
 
+mongosh "mongodb+srv://bellevueuniversity.lftytpq.mongodb.net/" --apiVersion 1 --username <db_username>
 """
 
 # Import the MongoClient

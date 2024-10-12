@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--
+  Student Name: Bernice Templeman
+  File Name: index.html
+  Date: 10/07/204
+-->
+<html lang="en">
+  <head>
+    <title>Portfolio: WEB-335 Projects</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Emblema+One&family=Lora&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/appletouch-icon.png"
+    />
+    <link rel="icon" sizes="192x192" href="images/android-chrome-192.png" />
+    <style>
+       .cards {
+         display: flex;
+         justify-content: space-between;
+         padding: 20px;
+      }
+       .card {
+         box-shadow: 0 4px 8px 0 navy;
+         transition: 0.3s;
+         width: 25%;
+         margin: 0.9em;
+         padding: 5px;
+       }
+
+
+       .card:hover {
+         box-shadow: 16px; rgba(0, 0, 0, 0.2);
+       }
+
+       .container {
+         padding: 16px;
+       }
+       .cards {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+      }
+      .button-link {
+        display: flex;
+
+        margin: 0 auto;
+        background-color: #008cba;
+        color: white;
+        padding: 15px 32px;
+        font-size: 16px;
+        height: 25px;
+        width: 100px;
+      }
+      .button-link:hover {
+        background-color:    #04aa6d; /* Green */
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- Use the header area for the website name or logo -->
+      <header>
+        <div class="tab-desk"></div>
+        <div class="mobile">
+          <h1>&#128483; Portfolio</h1>
+          <h3>Bernice Templeman</h3>
+        </div>
+      </header>
+
+      <!-- Use the nav area to add hyperlinks to other pages within the website-->
+      <nav>
+        <ul>
+          <li><a href="index.html">WEB 335: </a></li>
+        </ul>
+      </nav>
+
+      <!-- Use the main area to add the main content to the webpage -->
+      <main>
+        <!-- Section for Picture, goals, accomplishments, experience, education -->
+        <h2>
+          WEB 335 Projects
+        </h2>
+
+        <div class="centered">
+          <section class="cards">
+            <article class="card">
+              <img style="" src="./images/week2-output.png" alt="Quote" />
+              <h3>week_2: Quote</h3>
+              <p>Description: This file outputs a quote and gives credit to the originating author.</p>
+              <p>Technologies: Python</p>
+              <p>Learned: Python print</p>
+              <a href='https://github.com/bernicetempleman1/web-335'>GitHub repository</a></li>
+
+            </article>
+
+            <article class="card">
+              <img
+                style=""
+                src="./images/lemonadeStand.png"
+                alt="Lemonade Stand"
+              />
+              <h3>week_3: Lemonade Stand</h3>
+              <p>Description: This program uses the print function to output the cost and profit calculations.</p>
+              <p>Technologies: Python</p>
+              <p>Learned: Define functions to output variables and calculations</p>
+            </article>
+
+            <article class="card">
+              <img style="" src="./images/mongoDBscript.png" alt="MongoDB Shell" />
+              <h3>week_4: MongoDB Shell Script</h3>
+              <p>Description: MongoDB Shell Scripts for the users collection</p>
+              <p>Technologies:MongoDB shell</p>
+              <p>Learned: Configure MongoDB database, install shell, run scripts</p>
+            </article>
+
+            <article class="card">
+              <img style="" src="./images/MongoDB-projections.png" alt="MongoDB projections" />
+              <h3>week_5: MongoDB projections</h3>
+              <p>Description: MongoDB operations</p>
+              <p>Technologies: MongoDB</p>
+              <p>Learned: MongoDB projections</p>
+            </article>
+
+            <article class="card">
+              <img
+                style=""
+                src="./images/aggregate-queries.png"
+                alt="MongoDB Aggregate Queries"
+              />
+              <h3>week_6: MongoDB Shell Scripts for aggregate queries</h3>
+              <p>Description: MongoDB Shell Scripts for the houses and students collections.</p>
+              <p>Technologies:MongoDB</p>
+              <p>Learned: MongoDB Aggregate Queries</p>
+            </article>
+
+          </section>
+        </div>
+      </main>
+
+      <!-- Use the footer area to add webpage footer content-->
+      <footer>
+        <p>&copy; Copyright 2024. All Rights Reserved.</p>
+        <p>
+          <a href="mailto:bernice.templeman1@gmail.com"
+            >bernice.templeman1@gmail.com</a
+          >
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

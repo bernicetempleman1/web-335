@@ -12,7 +12,6 @@ db.users.findOne({lastName: 'Templeman'})
 /**
  * Insert the newly user document.
  */
-
 db.users.insertOne({ 'firstName':'Bernice', 'lastName': 'Templeman', 'employeeId': '10101010', 'email': 'btempleman@me.com', 'dateCreated': new Date()});
 
 // verify user exists

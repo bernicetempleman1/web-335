@@ -23,6 +23,8 @@
         "email": "jbach@me.com",
         "dateCreated": new Date()
     }
+MongoDB Shell:
+    mongosh "mongodb+srv://bellevueuniversity.lftytpq.mongodb.net/" --apiVersion 1 --username <db_username>
  */
 
 // Display all users in the collection.
